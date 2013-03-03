@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Grid",
+  "description": "Presents reddit posts in a grid instead of the default list layout.",
+  "version": "0.1",
+
+  "permissions": [
+    "http://reddit.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://www.reddit.com/*"],
+      "css": ["css/style.css"],
+      "js": ["js/vendor/jquery.min.js", "js/vendor/underscore.min.js", "js/vendor/jquery.isotope.min.js", "js/grid.js"]
+    }
+  ],
+  "page_action": {
+    "default_icon": "imgs/icon.png",
+    "default_popup": "popup.html"
+  }
+}
